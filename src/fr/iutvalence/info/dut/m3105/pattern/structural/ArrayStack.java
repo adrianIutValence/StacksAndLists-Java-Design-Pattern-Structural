@@ -1,24 +1,25 @@
 package fr.iutvalence.info.dut.m3105.pattern.structural;
 
-public class ArrayStack {
-	private String[] array;
+public class ArrayStack<E> implements Stack<E>{
+	private E[] array;
 	private int readingCursor;
 	
+	@SuppressWarnings("unchecked")
 	public ArrayStack(){
-		this.array = new String[10];
+		this.array = (E[]) new Object[10];
 		this.readingCursor = 0;
 	}
 	
-	public void push(String item){
+	public void push(E item){
 		this.array[this.readingCursor] = item;
 		this.readingCursor += 1;
 	}
 	
-	public String peek(){
+	public E peek(){
 		return this.array[this.readingCursor-1];
 	}
 	
-	public String pop(){
+	public E pop(){
 		this.readingCursor -= 1;
 		return this.array[this.readingCursor];
 	}

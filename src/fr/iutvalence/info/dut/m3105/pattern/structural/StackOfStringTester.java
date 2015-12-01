@@ -2,9 +2,9 @@ package fr.iutvalence.info.dut.m3105.pattern.structural;
 
 
 public class StackOfStringTester {
-	private ArrayStack stack;
+	private Stack<String> stack;
 
-	public StackOfStringTester(ArrayStack stack) {
+	public StackOfStringTester(Stack<String> stack) {
 		this.stack = stack;
 	}
 
